@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/youx-weather/static/css/main.b8bbb0e9.chunk.css",
+    "main.js": "/youx-weather/static/js/main.14a52e48.chunk.js",
+    "main.js.map": "/youx-weather/static/js/main.14a52e48.chunk.js.map",
+    "runtime-main.js": "/youx-weather/static/js/runtime-main.8d1a096a.js",
+    "runtime-main.js.map": "/youx-weather/static/js/runtime-main.8d1a096a.js.map",
+    "static/js/2.8697d480.chunk.js": "/youx-weather/static/js/2.8697d480.chunk.js",
+    "static/js/2.8697d480.chunk.js.map": "/youx-weather/static/js/2.8697d480.chunk.js.map",
+    "index.html": "/youx-weather/index.html",
+    "static/css/main.b8bbb0e9.chunk.css.map": "/youx-weather/static/css/main.b8bbb0e9.chunk.css.map",
+    "static/js/2.8697d480.chunk.js.LICENSE.txt": "/youx-weather/static/js/2.8697d480.chunk.js.LICENSE.txt",
+    "static/media/dozhd-noch.5e919563.jpg": "/youx-weather/static/media/dozhd-noch.5e919563.jpg",
+    "static/media/moon-clouds.4903b037.jpg": "/youx-weather/static/media/moon-clouds.4903b037.jpg",
+    "static/media/night.c3407709.jpg": "/youx-weather/static/media/night.c3407709.jpg",
+    "static/media/oblachnoe.5bf735ef.jpg": "/youx-weather/static/media/oblachnoe.5bf735ef.jpg",
+    "static/media/owfont-regular.css": "/youx-weather/static/media/owfont-regular.77585afb.eot",
+    "static/media/rain.66d4dcc7.jpg": "/youx-weather/static/media/rain.66d4dcc7.jpg",
+    "static/media/yasnoe-nebo.9561ba09.jpg": "/youx-weather/static/media/yasnoe-nebo.9561ba09.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d1a096a.js",
+    "static/js/2.8697d480.chunk.js",
+    "static/css/main.b8bbb0e9.chunk.css",
+    "static/js/main.14a52e48.chunk.js"
+  ]
+}
