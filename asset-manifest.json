@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/youx-weather/static/css/main.b8bbb0e9.chunk.css",
-    "main.js": "/youx-weather/static/js/main.14a52e48.chunk.js",
-    "main.js.map": "/youx-weather/static/js/main.14a52e48.chunk.js.map",
+    "main.js": "/youx-weather/static/js/main.2b7c6f96.chunk.js",
+    "main.js.map": "/youx-weather/static/js/main.2b7c6f96.chunk.js.map",
     "runtime-main.js": "/youx-weather/static/js/runtime-main.8d1a096a.js",
     "runtime-main.js.map": "/youx-weather/static/js/runtime-main.8d1a096a.js.map",
     "static/js/2.8697d480.chunk.js": "/youx-weather/static/js/2.8697d480.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.8d1a096a.js",
     "static/js/2.8697d480.chunk.js",
     "static/css/main.b8bbb0e9.chunk.css",
-    "static/js/main.14a52e48.chunk.js"
+    "static/js/main.2b7c6f96.chunk.js"
   ]
 }
