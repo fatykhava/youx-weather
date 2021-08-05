@@ -1,0 +1,24 @@
+.wrapper {
+  position: relative;
+}
+
+.input {
+  width: 200px;
+  padding: 7px 20px;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+  border-radius: 5px;
+}
+
+.label {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
+  & svg {
+    width: 16px;
+    height: 16px;
+  }
+}
