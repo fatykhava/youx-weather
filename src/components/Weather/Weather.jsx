@@ -1,42 +1,95 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import SearchInput from '../common/SearchInput/SearchInput';
-import {connect} from 'react-redux';
-import {getSearchCityCurrentWeatherData, initializeApp} from "../../redux/reducers/appReducer";
-import {getBgImg, getCity, getCityInfo, getDate, getIsInit, getWeather} from "../../redux/selectors/appSelectors";
 import style from './Weather.module.scss';
+import openWeatherMapAPI from "../../api/openWeatherMapAPI";
+import {selectImg} from "../../utils/background";
+import getDate from "../../utils/date";
 
 const Weather = (props) => {
+  let [city, setCity] = useState('Minsk');
+  let [weatherInfo, setWeatherInfo] = useState({
+    cityInfo: null,
+    weather: null,
+    date: null,
+    bgImg: null,
+  });
+  let [isInit, setIsInit] = useState(false)
+
   useEffect(() => {
-      props.initializeApp();
+    navigator.geolocation.getCurrentPosition(position => {
+      const {latitude, longitude} = position.coords;
+      if (!!latitude && !!longitude) {
+        return getWeatherDataByCoordinate(latitude, longitude);
+      } else {
+        return getWeatherDataByCity(city);
+      }
+    });
   }, [])
 
+  useEffect(() => {
+    return getWeatherDataByCity(city);
+  }, [city])
+
+  const getWeatherDataByCity = (city) => {
+    return openWeatherMapAPI.getSearchCityCurrentWeatherData(city)
+      .then(data => {
+        processWeatherData(data);
+        setIsInit(true);
+      }).catch(error => {
+      alert('This city wasn\'t be found');
+    });
+  }
+
+  const getWeatherDataByCoordinate = (latitude, longitude) => {
+    return openWeatherMapAPI.getUserCityCurrentWeatherData(latitude, longitude)
+      .then(data => {
+        processWeatherData(data);
+        setIsInit(true);
+      }).catch(error => {
+      alert('This city wasn\'t be found');
+    });
+  }
+
+  const processWeatherData = (data) => {
+    const image = selectImg(data.weather[0].description);
+    const updatedWeatherInfo = {
+      cityInfo: data.sys,
+      weather: {
+        temperature: data.main,
+        additional: data.weather[0],
+        wind: data.wind
+      },
+      date: getDate(),
+      bgImg: image,
+    };
+
+    setCity(data.name);
+    setWeatherInfo(updatedWeatherInfo);
+    return true;
+  }
+
+  const setCityValue = (cityValue) => {
+    setCity(cityValue);
+  }
+
   return (
-    <div className={style.wrapper} style={{backgroundImage: `url(${props.bgImg})`}}>
+    <div className={style.wrapper} style={{backgroundImage: `url(${weatherInfo.bgImg})`}}>
       {
-        props.isInit &&
+        isInit &&
         <div className={style.container}>
           <div className={style.content}>
-            <h1>{props.city}, {props.cityInfo?.country}</h1>
-            <h2>{props.date}</h2>
-            <i className={`weather-icon owf owf-${props.weather.additional.id} ${style.owf}`}></i>
-            <p>{props.weather.additional.description}</p>
-            <p>{Math.round(props.weather.temperature.temp)} °C</p>
-            <p>Humidity: {props.weather.temperature.humidity} %</p>
-            <p>Wind: {props.weather.wind.speed} km/h</p>
+            <h1>{city}, {weatherInfo.cityInfo?.country}</h1>
+            <h2>{weatherInfo.date}</h2>
+            <i className={`weather-icon owf owf-${weatherInfo.weather.additional.id} ${style.owf}`}></i>
+            <p>{weatherInfo.weather.additional.description}</p>
+            <p>{Math.round(weatherInfo.weather.temperature.temp)} °C</p>
+            <p>Humidity: {weatherInfo.weather.temperature.humidity} %</p>
+            <p>Wind: {weatherInfo.weather.wind.speed} km/h</p>
           </div>
-          <SearchInput inputValue={props.city} getData={props.getSearchCityCurrentWeatherData}/>
+          <SearchInput inputValue={city} getData={setCityValue}/>
         </div>
       }
     </div>);
 }
 
-const mapStateToProps = (state) => ({
-  city: getCity(state),
-  cityInfo: getCityInfo(state),
-  weather: getWeather(state),
-  date: getDate(state),
-  isInit: getIsInit(state),
-  bgImg: getBgImg(state),
-})
-
-export default connect(mapStateToProps, {initializeApp, getSearchCityCurrentWeatherData})(Weather);
+export default Weather;
