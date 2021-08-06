@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/youx-weather/static/css/main.b8bbb0e9.chunk.css",
-    "main.js": "/youx-weather/static/js/main.2b7c6f96.chunk.js",
-    "main.js.map": "/youx-weather/static/js/main.2b7c6f96.chunk.js.map",
+    "main.js": "/youx-weather/static/js/main.199b5c46.chunk.js",
+    "main.js.map": "/youx-weather/static/js/main.199b5c46.chunk.js.map",
     "runtime-main.js": "/youx-weather/static/js/runtime-main.8d1a096a.js",
     "runtime-main.js.map": "/youx-weather/static/js/runtime-main.8d1a096a.js.map",
-    "static/js/2.8697d480.chunk.js": "/youx-weather/static/js/2.8697d480.chunk.js",
-    "static/js/2.8697d480.chunk.js.map": "/youx-weather/static/js/2.8697d480.chunk.js.map",
+    "static/js/2.88f0fedf.chunk.js": "/youx-weather/static/js/2.88f0fedf.chunk.js",
+    "static/js/2.88f0fedf.chunk.js.map": "/youx-weather/static/js/2.88f0fedf.chunk.js.map",
     "index.html": "/youx-weather/index.html",
     "static/css/main.b8bbb0e9.chunk.css.map": "/youx-weather/static/css/main.b8bbb0e9.chunk.css.map",
-    "static/js/2.8697d480.chunk.js.LICENSE.txt": "/youx-weather/static/js/2.8697d480.chunk.js.LICENSE.txt",
+    "static/js/2.88f0fedf.chunk.js.LICENSE.txt": "/youx-weather/static/js/2.88f0fedf.chunk.js.LICENSE.txt",
     "static/media/dozhd-noch.5e919563.jpg": "/youx-weather/static/media/dozhd-noch.5e919563.jpg",
     "static/media/moon-clouds.4903b037.jpg": "/youx-weather/static/media/moon-clouds.4903b037.jpg",
     "static/media/night.c3407709.jpg": "/youx-weather/static/media/night.c3407709.jpg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8d1a096a.js",
-    "static/js/2.8697d480.chunk.js",
+    "static/js/2.88f0fedf.chunk.js",
     "static/css/main.b8bbb0e9.chunk.css",
-    "static/js/main.2b7c6f96.chunk.js"
+    "static/js/main.199b5c46.chunk.js"
   ]
 }
