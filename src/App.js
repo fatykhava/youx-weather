@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
-import Weather from './components/Weather/Weather';
+import Weather from './components/pages/Weather/Weather';
 
 const App = () => {
-  return (
-    <Weather/>
-  );
+  return <Weather/>;
 }
 
 export default App;

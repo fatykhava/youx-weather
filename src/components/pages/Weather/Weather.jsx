@@ -1,19 +1,25 @@
 import React, {useEffect, useState} from 'react';
-import SearchInput from '../common/SearchInput/SearchInput';
+import SearchInput from '../../common/SearchInput/SearchInput';
 import style from './Weather.module.scss';
-import openWeatherMapAPI from "../../api/openWeatherMapAPI";
-import {selectImg} from "../../utils/background";
-import getDate from "../../utils/date";
+import openWeatherMapAPI from "../../../api/openWeatherMapAPI";
+import {selectImg} from "../../../utils/background";
+import getDate from "../../../utils/date";
+import Notification from "../../common/Notification/Notification";
 
-const Weather = (props) => {
-  let [city, setCity] = useState('Minsk');
+const Weather = () => {
+  const DEFAULT_CITY = 'Minsk';
+  let [city, setCity] = useState(DEFAULT_CITY);
   let [weatherInfo, setWeatherInfo] = useState({
     cityInfo: null,
     weather: null,
     date: null,
     bgImg: null,
   });
-  let [isInit, setIsInit] = useState(false)
+  let [isInit, setIsInit] = useState(false);
+  let [error, setError] = useState({
+    message: null,
+    status: false,
+  });
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(position => {
@@ -36,8 +42,11 @@ const Weather = (props) => {
         processWeatherData(data);
         setIsInit(true);
       }).catch(error => {
-      alert('This city wasn\'t be found');
-    });
+        setError({
+          message: 'This city wasn\'t be found',
+          status: true,
+        })
+      });
   }
 
   const getWeatherDataByCoordinate = (latitude, longitude) => {
@@ -46,8 +55,11 @@ const Weather = (props) => {
         processWeatherData(data);
         setIsInit(true);
       }).catch(error => {
-      alert('This city wasn\'t be found');
-    });
+        setError({
+          message: 'This city wasn\'t be found',
+          status: true,
+        })
+      });
   }
 
   const processWeatherData = (data) => {
@@ -69,7 +81,15 @@ const Weather = (props) => {
   }
 
   const setCityValue = (cityValue) => {
-    setCity(cityValue);
+    return setCity(cityValue);
+  }
+
+  const closeNotification = () => {
+    setCity(DEFAULT_CITY);
+    return setError({
+      message: null,
+      status: false,
+    })
   }
 
   return (
@@ -88,6 +108,10 @@ const Weather = (props) => {
           </div>
           <SearchInput inputValue={city} getData={setCityValue}/>
         </div>
+      }
+      {
+        error.status &&
+        <Notification error={error} closeNotification={closeNotification}/>
       }
     </div>);
 }
