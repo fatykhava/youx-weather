@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/youx-weather/static/css/main.b8bbb0e9.chunk.css",
-    "main.js": "/youx-weather/static/js/main.199b5c46.chunk.js",
-    "main.js.map": "/youx-weather/static/js/main.199b5c46.chunk.js.map",
+    "main.css": "/youx-weather/static/css/main.0fa0daca.chunk.css",
+    "main.js": "/youx-weather/static/js/main.bee9508b.chunk.js",
+    "main.js.map": "/youx-weather/static/js/main.bee9508b.chunk.js.map",
     "runtime-main.js": "/youx-weather/static/js/runtime-main.8d1a096a.js",
     "runtime-main.js.map": "/youx-weather/static/js/runtime-main.8d1a096a.js.map",
-    "static/js/2.88f0fedf.chunk.js": "/youx-weather/static/js/2.88f0fedf.chunk.js",
-    "static/js/2.88f0fedf.chunk.js.map": "/youx-weather/static/js/2.88f0fedf.chunk.js.map",
+    "static/js/2.b7c4d5c9.chunk.js": "/youx-weather/static/js/2.b7c4d5c9.chunk.js",
+    "static/js/2.b7c4d5c9.chunk.js.map": "/youx-weather/static/js/2.b7c4d5c9.chunk.js.map",
     "index.html": "/youx-weather/index.html",
-    "static/css/main.b8bbb0e9.chunk.css.map": "/youx-weather/static/css/main.b8bbb0e9.chunk.css.map",
-    "static/js/2.88f0fedf.chunk.js.LICENSE.txt": "/youx-weather/static/js/2.88f0fedf.chunk.js.LICENSE.txt",
-    "static/media/dozhd-noch.5e919563.jpg": "/youx-weather/static/media/dozhd-noch.5e919563.jpg",
-    "static/media/moon-clouds.4903b037.jpg": "/youx-weather/static/media/moon-clouds.4903b037.jpg",
+    "static/css/main.0fa0daca.chunk.css.map": "/youx-weather/static/css/main.0fa0daca.chunk.css.map",
+    "static/js/2.b7c4d5c9.chunk.js.LICENSE.txt": "/youx-weather/static/js/2.b7c4d5c9.chunk.js.LICENSE.txt",
+    "static/media/dozhd-noch.eac70128.jpg": "/youx-weather/static/media/dozhd-noch.eac70128.jpg",
+    "static/media/error.4a75b478.jpg": "/youx-weather/static/media/error.4a75b478.jpg",
+    "static/media/moon-clouds.4cb86d94.jpg": "/youx-weather/static/media/moon-clouds.4cb86d94.jpg",
     "static/media/night.c3407709.jpg": "/youx-weather/static/media/night.c3407709.jpg",
-    "static/media/oblachnoe.5bf735ef.jpg": "/youx-weather/static/media/oblachnoe.5bf735ef.jpg",
+    "static/media/oblachnoe.e942f2d3.jpg": "/youx-weather/static/media/oblachnoe.e942f2d3.jpg",
     "static/media/owfont-regular.css": "/youx-weather/static/media/owfont-regular.77585afb.eot",
-    "static/media/rain.66d4dcc7.jpg": "/youx-weather/static/media/rain.66d4dcc7.jpg",
-    "static/media/yasnoe-nebo.9561ba09.jpg": "/youx-weather/static/media/yasnoe-nebo.9561ba09.jpg"
+    "static/media/rain.076149e9.jpg": "/youx-weather/static/media/rain.076149e9.jpg",
+    "static/media/yasnoe-nebo.96a2e0a9.jpg": "/youx-weather/static/media/yasnoe-nebo.96a2e0a9.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8d1a096a.js",
-    "static/js/2.88f0fedf.chunk.js",
-    "static/css/main.b8bbb0e9.chunk.css",
-    "static/js/main.199b5c46.chunk.js"
+    "static/js/2.b7c4d5c9.chunk.js",
+    "static/css/main.0fa0daca.chunk.css",
+    "static/js/main.bee9508b.chunk.js"
   ]
 }
